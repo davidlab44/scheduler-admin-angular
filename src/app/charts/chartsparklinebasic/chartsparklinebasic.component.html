@@ -1,0 +1,157 @@
+<div id="container">
+  <div class="row d-flex justify-content-center">
+    <table>
+      <thead>
+        <th>
+          <div id="chart-spark1" class="col mx-auto">
+            <apx-chart
+              #chartspark1
+              [series]="chartAreaSparkline1Options.series!"
+              [chart]="commonAreaSparlineOptions.chart!"
+              [stroke]="commonAreaSparlineOptions.stroke!"
+              [yaxis]="commonAreaSparlineOptions.yaxis!"
+              [fill]="commonAreaSparlineOptions.fill!"
+              [colors]="chartAreaSparkline1Options.colors!"
+              [title]="chartAreaSparkline1Options.title!"
+              [subtitle]="chartAreaSparkline1Options.subtitle!"
+            ></apx-chart>
+          </div>
+        </th>
+        <th>
+          <div id="chart-spark2" class="col mx-auto">
+            <apx-chart
+              #chartspark2
+              [series]="chartAreaSparkline2Options.series!"
+              [chart]="commonAreaSparlineOptions.chart!"
+              [stroke]="commonAreaSparlineOptions.stroke!"
+              [yaxis]="commonAreaSparlineOptions.yaxis!"
+              [fill]="commonAreaSparlineOptions.fill!"
+              [colors]="chartAreaSparkline2Options.colors!"
+              [title]="chartAreaSparkline2Options.title!"
+              [subtitle]="chartAreaSparkline2Options.subtitle!"
+            ></apx-chart>
+          </div>
+        </th>
+        <th>
+          <div id="chart-spark3" class="col mx-auto">
+            <apx-chart
+              #chartspark3
+              [series]="chartAreaSparkline3Options.series!"
+              [chart]="commonAreaSparlineOptions.chart!"
+              [stroke]="commonAreaSparlineOptions.stroke!"
+              [yaxis]="commonAreaSparlineOptions.yaxis!"
+              [fill]="commonAreaSparlineOptions.fill!"
+              [title]="chartAreaSparkline3Options.title!"
+              [subtitle]="chartAreaSparkline3Options.subtitle!"
+            ></apx-chart>
+          </div>
+        </th>
+      </thead>
+    </table>
+
+    <div class="row d-flex justify-content-center">
+      <table>
+        <thead>
+          <th class="text-center">Total Value</th>
+          <th class="text-center">Percentage of Portfolio</th>
+          <th class="text-center">Last 10 days</th>
+          <th class="text-center">Volume</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">$32,554</td>
+            <td class="text-center">15%</td>
+            <td>
+              <div id="chart-1">
+                <apx-chart
+                  [series]="chartLineSparkline1Options.series!"
+                  [chart]="commonLineSparklineOptions.chart!"
+                  [tooltip]="commonLineSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+            <td>
+              <div id="chart-5">
+                <apx-chart
+                  [series]="chartBarSparkline1Options.series!"
+                  [chart]="commonBarSparklineOptions.chart!"
+                  [plotOptions]="commonBarSparklineOptions.plotOptions!"
+                  [tooltip]="commonBarSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>$23,533</td>
+            <td>7%</td>
+            <td>
+              <div id="chart-2">
+                <apx-chart
+                  [series]="chartLineSparkline2Options.series!"
+                  [chart]="commonLineSparklineOptions.chart!"
+                  [tooltip]="commonLineSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+            <td>
+              <div id="chart-6">
+                <apx-chart
+                  [series]="chartBarSparkline2Options.series!"
+                  [chart]="commonBarSparklineOptions.chart!"
+                  [plotOptions]="commonBarSparklineOptions.plotOptions!"
+                  [tooltip]="commonBarSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>$54,276</td>
+            <td>9%</td>
+            <td>
+              <div id="chart-3">
+                <apx-chart
+                  [series]="chartLineSparkline3Options.series!"
+                  [chart]="commonLineSparklineOptions.chart!"
+                  [tooltip]="commonLineSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+            <td>
+              <div id="chart-7">
+                <apx-chart
+                  [series]="chartBarSparkline3Options.series!"
+                  [chart]="commonBarSparklineOptions.chart!"
+                  [plotOptions]="commonBarSparklineOptions.plotOptions!"
+                  [tooltip]="commonBarSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>$11,533</td>
+            <td>2%</td>
+            <td>
+              <div id="chart-4">
+                <apx-chart
+                  [series]="chartLineSparkline4Options.series!!"
+                  [chart]="commonLineSparklineOptions.chart!"
+                  [tooltip]="commonLineSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+            <td>
+              <div id="chart-8">
+                <apx-chart
+                  [series]="chartBarSparkline4Options.series!"
+                  [chart]="commonBarSparklineOptions.chart!"
+                  [plotOptions]="commonBarSparklineOptions.plotOptions!"
+                  [tooltip]="commonBarSparklineOptions.tooltip!"
+                ></apx-chart>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
