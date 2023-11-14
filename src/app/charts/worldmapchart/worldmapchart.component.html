@@ -1,43 +1,51 @@
-<!--<html>
+<!--<!DOCTYPE html>
+<html>
   <head>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <script type="text/javascript">
-      google.charts.load("current", {
-        packages: ["geochart"],
-      });
-      google.charts.setOnLoadCallback(drawRegionsMap);
-
-      function drawRegionsMap() {
-        var data = google.visualization.arrayToDataTable([
-          ["Country", "Popularity"],
-          ["Germany", 200],
-          ["United States", 300],
-          ["Brazil", 400],
-          ["Canada", 500],
-          ["France", 600],
-          ["RU", 700],
-        ]);
-
-        var options = {};
-
-        var chart = new google.visualization.GeoChart(
-          document.getElementById("regions_div")
-        );
-
-        chart.draw(data, options);
+    <title>Leaflet GeoJSON Example</title>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css"
+    />
+  <style type="text/css">
+      .leaflet-container {
+        background-color: #c5e8ff;
       }
-    </script>
+      #map {
+        width: 600px;
+
+        height: 400px;
+      }
+    </style>
   </head>
+
   <body>
-    <div id="regions_div" style="width: 900px; height: 500px"></div>
+    <div id="map"></div>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+    <script>
+      var myGeoJSONPath = "path/to/mymap.geo.json";
+      var myCustomStyle = {
+        stroke: false,
+        fill: true,
+        fillColor: "#fff",
+        fillOpacity: 1,
+      };
+      $.getJSON(myGeoJSONPath, function (data) {
+        var map = L.map("map").setView([39.74739, -105], 4);
+
+        L.geoJson(data, {
+          clickable: false,
+          style: myCustomStyle,
+        }).addTo(map);
+      });
+    </script>
   </body>
 </html>-->
-<!--<google-chart
-  [chartType]="'LineChart'"
-  [dataPromise]="dataPromise"
-  [options]="options"
-  (onSelect)="onSelect($event)"
-></google-chart>-->
+<script src="//cdn.amcharts.com/lib/5/index.js"></script>
+<script src="//cdn.amcharts.com/lib/5/map.js"></script>
+<script src="//cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="//cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<div>WorldMapChart</div>
+<div id="chartdiv"></div>

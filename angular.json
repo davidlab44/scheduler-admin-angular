@@ -16,6 +16,10 @@
             "outputPath": "dist/demo_charts",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "highcharts",
+              "apexcharts"
+            ],
             "polyfills": [
               "zone.js"
             ],

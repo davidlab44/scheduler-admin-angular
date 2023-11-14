@@ -1,1 +1,154 @@
-<p>dashboard works!</p>
+<body class="bg-primary text-light">
+  <div id="wrapper">
+    <div class="content-area">
+      <div class="container-fluid">
+        <div class="text-right mt-3 mb-3 fixed-top">
+          <div class="main">
+            <div class="row sparkboxes mt-4">
+              <table class="table_header">
+                <thead>
+                  <tr>
+                    <th class="col-md-3">
+                      <div class="details_box1">
+                        <h3>140</h3>
+                        <apx-chart
+                          [series]="spark1.series!"
+                          [chart]="spark1.chart!"
+                          [stroke]="spark1.stroke!"
+                          [markers]="spark1.markers!"
+                          [grid]="spark1.grid!"
+                          [colors]="spark1.colors!"
+                          [tooltip]="spark1.tooltip!"
+                        ></apx-chart>
+                        <h4>Count of suppliers</h4>
+                      </div>
+                    </th>
+                    <th class="col-md-3">
+                      <div class="details_box2">
+                        <h3>195</h3>
+                        <apx-chart
+                          [series]="spark2.series!"
+                          [chart]="spark2.chart!"
+                          [stroke]="spark2.stroke!"
+                          [markers]="spark2.markers!"
+                          [grid]="spark2.grid!"
+                          [colors]="spark2.colors!"
+                          [tooltip]="spark2.tooltip!"
+                        ></apx-chart>
+                        <h4>Buyers</h4>
+                      </div>
+                    </th>
+                    <th class="col-md-3">
+                      <div class="details_box3">
+                        <h3>6982</h3>
+                        <apx-chart
+                          [series]="spark3.series!"
+                          [chart]="spark3.chart!"
+                          [stroke]="spark3.stroke!"
+                          [markers]="spark3.markers!"
+                          [grid]="spark3.grid!"
+                          [colors]="spark3.colors!"
+                          [tooltip]="spark3.tooltip!"
+                        ></apx-chart>
+                        <h4>Connections</h4>
+                      </div>
+                    </th>
+                    <th class="col-md-3">
+                      <div class="details_box4">
+                        <h3>19</h3>
+                        <apx-chart
+                          [series]="spark4.series!"
+                          [chart]="spark4.chart!"
+                          [stroke]="spark4.stroke!"
+                          [markers]="spark4.markers!"
+                          [grid]="spark4.grid!"
+                          [colors]="spark4.colors!"
+                          [tooltip]="spark4.tooltip!"
+                        ></apx-chart>
+                        <h4>Countries</h4>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+
+            <table class="table_body">
+              <td class="cell_chart1">
+                <tr class="row1_chart1">
+                  <div class="col-md-6">
+                    <div class="box shadow mt-4">
+                      <div id="radialBarBottom">
+                        <apx-chart
+                          [chart]="optionsCircle4.chart!"
+                          [plotOptions]="optionsCircle4.plotOptions!"
+                          [series]="optionsCircle4.series!"
+                          [stroke]="optionsCircle4.stroke!"
+                          [legend]="optionsCircle4.legend!"
+                        ></apx-chart>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+                <tr class="row2_chart3">
+                  <div class="col-md-6">
+                    <div class="box shadow mt-4">
+                      <div id="barchart">
+                        <apx-chart
+                          [chart]="optionsBar.chart!"
+                          [plotOptions]="optionsBar.plotOptions!"
+                          [series]="optionsBar.series!"
+                          [xaxis]="optionsBar.xaxis!"
+                          [fill]="optionsBar.fill!"
+                        ></apx-chart>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+              </td>
+              <td class="cell_chart2">
+                <tr class="row1_chart2">
+                  <div class="col-md-6">
+                    <div class="box shadow mt-4">
+                      <div id="line-adwords">
+                        <apx-chart
+                          [chart]="optionsLine.chart!"
+                          [stroke]="optionsLine.stroke!"
+                          [series]="optionsLine.series!"
+                          [title]="optionsLine.title!"
+                          [subtitle]="optionsLine.subtitle!"
+                          [markers]="optionsLine.markers!"
+                          [grid]="optionsLine.grid!"
+                          [labels]="optionsLine.labels!"
+                          [labels]="optionsLine.labels!"
+                          [xaxis]="optionsLine.xaxis!"
+                          [legend]="optionsLine.legend!"
+                        ></apx-chart>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+                <tr class="row2_chart4">
+                  <div class="col-md-6">
+                    <div class="box shadow mt-4">
+                      <div id="areachart">
+                        <apx-chart
+                          [chart]="optionsArea.chart!"
+                          [stroke]="optionsArea.stroke!"
+                          [series]="optionsArea.series!"
+                          [xaxis]="optionsArea.xaxis!"
+                          [fill]="optionsArea.fill!"
+                          [tooltip]="optionsArea.tooltip!"
+                        ></apx-chart>
+                      </div>
+                    </div>
+                  </div>
+                </tr>
+              </td>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

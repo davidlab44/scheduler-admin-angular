@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+//import { DataService } from './data.service';
 
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -13,6 +15,8 @@ import { ChartareaComponent } from './charts/chartarea/chartarea.component';
 import { ChartsparklinebasicComponent } from './charts/chartsparklinebasic/chartsparklinebasic.component';
 import { SimplePieChartComponent } from './charts/simple-pie-chart/simple-pie-chart.component';
 import { WorldmapchartComponent } from './charts/worldmapchart/worldmapchart.component';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { SimpleColumnChartComponent } from './charts/simple-column-chart/simple-column-chart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,6 +24,7 @@ const routes: Routes = [
   { path: 'basicLineChart', component: ChartlineComponent },
   { path: 'basicAreaChart', component: ChartareaComponent },
   { path: 'basiccolumnChart', component: ChartcolumnComponent },
+  { path: 'simplecolumnChart', component: SimpleColumnChartComponent },
   { path: 'sparklineChart', component: ChartsparklinebasicComponent },
   { path: 'simplePieChart', component: SimplePieChartComponent },
   { path: 'worldmapChart', component: WorldmapchartComponent },
@@ -37,6 +42,7 @@ const routes: Routes = [
     ChartsparklinebasicComponent,
     SimplePieChartComponent,
     WorldmapchartComponent,
+    SimpleColumnChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,9 +50,11 @@ const routes: Routes = [
     ReactiveFormsModule,
     NgApexchartsModule,
     RouterModule.forRoot(routes),
+    HighchartsChartModule,
+    HttpClientModule,
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [], //DataService
   bootstrap: [AppComponent],
 })
 export class AppModule {}
