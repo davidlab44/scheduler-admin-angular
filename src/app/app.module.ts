@@ -17,6 +17,7 @@ import { SimplePieChartComponent } from './charts/simple-pie-chart/simple-pie-ch
 import { WorldmapchartComponent } from './charts/worldmapchart/worldmapchart.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { SimpleColumnChartComponent } from './charts/simple-column-chart/simple-column-chart.component';
+import { UsastatesmapComponent } from './charts/usastatesmap/usastatesmap.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'sparklineChart', component: ChartsparklinebasicComponent },
   { path: 'simplePieChart', component: SimplePieChartComponent },
   { path: 'worldmapChart', component: WorldmapchartComponent },
+  { path: 'UsaMapStateChart', component: UsastatesmapComponent },
   { path: 'dashboard', component: DashboardComponent },
 ];
 
@@ -43,6 +45,7 @@ const routes: Routes = [
     SimplePieChartComponent,
     WorldmapchartComponent,
     SimpleColumnChartComponent,
+    UsastatesmapComponent,
   ],
   imports: [
     BrowserModule,
