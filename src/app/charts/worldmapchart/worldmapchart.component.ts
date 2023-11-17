@@ -14,53 +14,6 @@ export class WorldmapchartComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // Zooming to Countries Map
-
-    /*let root = am5.Root.new('chartdiv');
-    let chart = root.container.children.push(
-      am5map.MapChart.new(root, {
-        projection: am5map.geoEquirectangular(),
-      })
-    );
-    let polygonSeries = chart.series.push(
-      am5map.MapPolygonSeries.new(root, {
-        geoJSON: am5geodata_worldLow,
-      })
-    );
-    polygonSeries.data.push({
-      geometry: {
-        type: 'Polygon',
-        coordinates: [
-          [
-            [26.5936, 55.6676],
-            [26.175, 55.0033],
-            [25.8594, 54.9192],
-            [25.5473, 54.3317],
-            [24.7683, 53.9746],
-            [23.4845, 53.9398],
-            [23.37, 54.2005],
-            [22.7663, 54.3568],
-            [22.8311, 54.8384],
-            [21.2358, 55.2641],
-            [21.0462, 56.07],
-            [22.0845, 56.4067],
-            [24.1206, 56.2642],
-            [24.9032, 56.3982],
-            [26.5936, 55.6676],
-          ],
-        ],
-      },
-    });
-    polygonSeries.mapPolygons.template.setAll({
-      tooltipText: '{name}',
-      interactive: true,
-    });
-
-    polygonSeries.mapPolygons.template.states.create('hover', {
-      fill: am5.color(0x75cdd6),
-
-    });*/ // END Zooming to Countries Map
-
     /* Chart code
 
        Map with Animated Bubbles
@@ -77,8 +30,8 @@ export class WorldmapchartComponent implements OnInit {
         value: 100,
       },
       {
-        id: 'CN',
-        name: 'China',
+        id: 'PL',
+        name: 'Polonia',
         value: 100,
       },
       {
@@ -97,13 +50,43 @@ export class WorldmapchartComponent implements OnInit {
         value: 100,
       },
       {
-        id: 'BR',
-        name: 'Brasil',
+        id: 'FR',
+        name: 'France',
         value: 100,
       },
       {
         id: 'ES',
         name: 'Spain',
+        value: 100,
+      },
+      {
+        id: 'PE',
+        name: 'Peru',
+        value: 100,
+      },
+      {
+        id: 'SE',
+        name: 'Sweden',
+        value: 100,
+      },
+      {
+        id: 'IT',
+        name: 'Italy',
+        value: 100,
+      },
+      {
+        id: 'BR',
+        name: 'Brasil',
+        value: 100,
+      },
+      {
+        id: 'NL',
+        name: 'Holland',
+        value: 100,
+      },
+      {
+        id: 'BE',
+        name: 'Belgium',
         value: 100,
       },
     ];

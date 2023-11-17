@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "metal-scholar-405314",
+  "private_key_id": "1f14ae8b2f029cbeb17d24f553de6c8d99ccffef",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCFGkL/s1sVMn2r\nEAHsur7j5WlEUkr8OUsv5IkSfufbxagDRVKCg7MrrI389nttziDEYQIqvu91nblf\nLR1+n2dC3aeMfoyXC9xnMckx8vGTHrOUB9W2g6lFYvMTkuNSmh+IQmySuLKvrDJK\nXNpDp7+gH6muNLmgyECgYvNhReG6igekRsD7DA2UDtZ+VII+twFFvA7bY2+3offL\n5diimvAXt6ONpSWAY53ByfcuCjOY3lPG0tTDkRK5CZzCIR77YgTZT/djw0RQW8Cw\nqpKPwzJmL1+F48/ZR6gxG3GidpFSD2GBaP2SVT6x8AYHYK0qGbXixZ0AdKjvg9Ce\nz0RCAqlDAgMBAAECggEABPKC5jHAgHEQI1zTXX0tHa8lITLAlThwgAtyniD34+e/\np9TsBz3Iwpqud31ziMHm9ft9pFsx19LTrHpJ8zqxp+2Ok8pVp4iHMUwFkx8fGJHc\nhefrAm3VBc/nJVnhTuyM/ZVxYWgDQnLMfKWP4yNtp6fbcsYnYi4fT7yoAU3RbMXX\n656YlD0ozKT5MwlEjX2FDzrIPpC/bJ3Z19WhJ3x2mv1WO33qBaYNoW0A8eodxYHP\nTh56nvLqHCUj/PA0cYZX8JByjX4jctJRszc0QszM3LQI2jd7hR6CBboJDg/XX3YT\nBxpqp1G0zk1jAsZ/EeXa1kbQcIYLaSbIEjB1NNAIFQKBgQC5SVhFfjdRzbp0TM5x\n1wymzcylaWw9L8nvc9CuRjgSUVnt8DExjnFuEERbDkn8mkhNuc1P1M5aRbuB+EiD\nJcuHuk2uxE0xCq5Vl57cZVQHgCtnRtO3HjPJ3du0V0b82c8Mr6AXMDhE+7em7UzK\n3nwXZ1IdugskKwF/kSRJ0pgo/QKBgQC35oB/LHQN26sJ/JC+2GcZQaSc4UYDTRee\nHom5OfhvuW05tczCWqOBRDAd1emMkJkyNiAycVuiFVhrGW2wlIs1myFGC3xNDtps\nmos4OgAmMph7rkl2L3H80zd1yFLNYjTh2B2Bc2a5BZZt+rFKTNFd3YZKbkDdRxcC\nIw5PnNzPPwKBgBsoev3EoEsnQnslfuUExl/0rlhYeXsGdCza5u2EcVeOAQZ1PGCt\nJkchr0NBdurFmm96GnPnF0/4BKHqSIaglZKRZi2FrGLR0/fLv4dCeuyWhsYehY3D\nqYefM0LdwBPzwPt1Cpwbf0PtOWAITEc4ESxFAq5ExLlKbG/MUGtZqN/pAoGBAJA2\n4NnaQICFnZHNUK15AxDZW3/zYXZBRJ4pEJQDFAJ5hWBWY2aesc4zbRBYqjgjRSAN\nNh6YquVmm9oRLOXm92xoZSWK6EV9umikoTzMr0VFNDL5sH5QIrHD6aAiIl0SAKqD\nUlAr8YhzC07f45yCtUVI7YD9CTz9/NseJqDkQHz9AoGAH53sCw0nvnm4QWc3Rfz7\nrcVIzahSzpCxx1ceqAZdhk50NFW0hKeVuL9tLmliZ4bRSohz1YCrZG2Y61Xfu2OZ\n5vAjZQ9paPLQQIipCOcT6B7RPbXVJ7JXUwLYSJtrznvdrgonT9klOucRT9HvJBhz\nMx3WzGZWI9dmHVoLQ8bUw1w=\n-----END PRIVATE KEY-----\n",
+  "client_email": "rubenpersonaldemochart@metal-scholar-405314.iam.gserviceaccount.com",
+  "client_id": "108356146969479092175",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rubenpersonaldemochart%40metal-scholar-405314.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

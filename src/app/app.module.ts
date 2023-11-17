@@ -18,6 +18,7 @@ import { WorldmapchartComponent } from './charts/worldmapchart/worldmapchart.com
 import { HighchartsChartModule } from 'highcharts-angular';
 import { SimpleColumnChartComponent } from './charts/simple-column-chart/simple-column-chart.component';
 import { UsastatesmapComponent } from './charts/usastatesmap/usastatesmap.component';
+import { BigQueryComponent } from './bq/big-query/big-query.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -46,6 +47,7 @@ const routes: Routes = [
     WorldmapchartComponent,
     SimpleColumnChartComponent,
     UsastatesmapComponent,
+    BigQueryComponent,
   ],
   imports: [
     BrowserModule,

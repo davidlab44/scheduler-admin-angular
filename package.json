@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@google-cloud/bigquery": "^7.3.0",
     "@highcharts/map-collection": "^2.1.0",
     "@popperjs/core": "^2.11.8",
     "apexcharts": "^3.44.0",
