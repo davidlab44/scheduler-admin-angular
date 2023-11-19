@@ -7,12 +7,27 @@ import { User } from '../user.interface';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss']
 })
-export class UserListComponent implements OnInit {
+//export class UserListComponent implements OnInit {
+export class UserListComponent {
   users: User[] = [];
 
   constructor(private userService: UserService) {}
 
-  ngOnInit(): void {
+  login(username: string, password: string): void {
+    this.userService.login(username, password).subscribe(
+      (response) => {
+        // Handle the response here
+        console.log('Login response:', response);
+      },
+      (error) => {
+        // Handle errors
+        console.error('Login error:', error);
+      }
+    );
+  }
+
+  //ngOnInit(): void {
+    /*
     this.userService.getUsers().subscribe(
       (data: User[]) => {
         this.users = data;
@@ -21,5 +36,7 @@ export class UserListComponent implements OnInit {
         console.error(error);
       }
     );
-  }
+    */
+  //}
+
 }
