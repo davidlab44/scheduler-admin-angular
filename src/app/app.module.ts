@@ -15,6 +15,7 @@ import { routes } from './app.routes';
 import { ContainerDirective } from './container.directive';
 import { ShareComponent } from './share/share.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 
 WebFont.load({
@@ -24,7 +25,7 @@ WebFont.load({
 });
 
 @NgModule({
-  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent],
+  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent,LoginComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
