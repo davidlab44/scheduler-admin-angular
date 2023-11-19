@@ -1,29 +1,31 @@
-<p>login works!</p>
+    <!--
+    <p>login works!</p>
 
-<form class="example-form">
-    <mat-form-field class="example-full-width">
-      <mat-label>Usuario</mat-label>
-      <input matInput placeholder="Correo electronico:" value="">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-    </mat-form-field>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Usuario</mat-label>
+            <input matInput placeholder="Correo electronico:" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+    </form>
+    -->
 
-  </form>
-
-
-<h5><u><i>Login Form using Angular material!!</i></u></h5>
-<form class="example-form">
-<mat-form-field class="example-full-width" appearance="fill">
-<mat-label>Correo electrónico</mat-label>
-<input matInput placeholder="Enter your name" name="usename"
-[(ngModel)] ="username">
-</mat-form-field>
-<mat-form-field class="example-full-width" appearance="fill">
-<mat-label>Contraseña</mat-label>
-<input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password">
-</mat-form-field>
-<button mat-raised-button color="primary" (click)="submit()">Submit</button>
-<span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
-</form>
+    <h2>Administrador:</h2>
+    <br>
+    <br>
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput placeholder="Enter your email" name="usename"
+        [(ngModel)] ="username">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="submit()">Iniciar Sesión</button>
+        <span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+    </form>

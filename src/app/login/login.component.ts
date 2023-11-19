@@ -11,18 +11,18 @@ import {FormsModule} from '@angular/forms';
   imports: [FormsModule, MatFormFieldModule, MatInputModule]
 })
 export class LoginComponent {
-  username : string ="";
-  password : string ="";
-  show: boolean= false;
-  submit(){
-  console.log("user name is " + this.username)
-  this.clear();
-  }
-  clear(){
-  this.username ="";
-  this.password = "";
-  this.show = true;
-  }
+    username : string ="";
+    password : string ="";
+    show: boolean= false;
+    submit(){
+    console.log("user name is " + this.username)
+    this.clear();
+    }
+    clear(){
+    this.username ="";
+    this.password = "";
+    this.show = true;
+    }
 }
 
 
