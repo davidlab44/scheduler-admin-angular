@@ -15,6 +15,7 @@ import { routes } from './app.routes';
 import { ContainerDirective } from './container.directive';
 import { ShareComponent } from './share/share.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 WebFont.load({
   google: {
@@ -32,6 +33,7 @@ WebFont.load({
     MatSnackBarModule,
     MatTabsModule,
     MatToolbarModule,
+    HttpClientModule,
     RouterModule.forRoot(routes, {}),
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production,
