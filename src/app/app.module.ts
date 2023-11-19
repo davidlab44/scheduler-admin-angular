@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { ContainerDirective } from './container.directive';
 import { ShareComponent } from './share/share.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 WebFont.load({
   google: {
@@ -22,7 +23,7 @@ WebFont.load({
 });
 
 @NgModule({
-  declarations: [AppComponent, ContainerDirective, ShareComponent],
+  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
