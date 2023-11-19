@@ -1,98 +1,29 @@
-<mat-card class="login-container">
+<p>login works!</p>
 
-	<mat-tab-group class="tabs" [selectedIndex]="0" #group>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario</mat-label>
+      <input matInput placeholder="Correo electronico:" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
 
-		<mat-tab label="login-tab">
-
-			<!-- Header -->
-			<h2>
-				Log in with your account
-			</h2>
-
-			<div class="error hidden" #loginError>
-				unauthorised
-			</div>
-
-			<!-- Login form -->
-			<mat-card-content>
-				<form class="login-form">
-
-					<!-- Email -->
-					<mat-form-field class="full-width">
-						<input matInput placeholder="Email" value="" #emailLogin>
-					</mat-form-field>		
-
-					<!-- Password -->
-					<mat-form-field class="full-width">
-						<input matInput type="password" placeholder="Password" value="">
-					</mat-form-field>
-					
-				</form>
-			</mat-card-content>
-
- 			<mat-card-actions>
-
-				<!-- Actions -->
-				<div class="login-actions">
-					<a (click)="forgot()">I forgot my password.</a>
-					<a>Not a user? Register.</a>
-				</div>
-
-				<!-- Login -->
-				<button mat-flat-button (click)="login()">Log In</button>
-				
-			</mat-card-actions>
-
-		</mat-tab>
-
-		<mat-tab label="forgot-tab">
-
-			<!-- Header -->
-			<h2>
-				Enter your email address to reset your password.
-			</h2>
-			<h3>
-				We'll send you a link to reset your password.
-			</h3>
-
-			<mat-card-content>
-				<mat-form-field class="full-width">
-					<input matInput placeholder="Email" value="" #emailForgot>
-				</mat-form-field>
-			</mat-card-content>
+  </form>
 
 
-			<mat-card-actions>
-
-				<!-- Login -->
-				<button mat-flat-button (click)="submit()">Submit</button>
-
-				<!-- Login -->
-				<button mat-flat-button (click)="cancel()">Cancel</button>
-				
-			</mat-card-actions>
-
-		</mat-tab>
-
-		<mat-tab label="success-tab">
-
-				<!-- Header -->
-				<h2>
-					Please check your inbox.
-				</h2>
-				<h3>
-					An email with instructions to reset your password was just sent to you.
-				</h3>
-
-			<mat-card-actions>
-
-				<!-- Login -->
-				<button mat-flat-button (click)="back()" class="center-button">Back to Login</button>
-				
-			</mat-card-actions>
-
-		</mat-tab>
-
-	</mat-tab-group>
-
-</mat-card>
+<h5><u><i>Login Form using Angular material!!</i></u></h5>
+<form class="example-form">
+<mat-form-field class="example-full-width" appearance="fill">
+<mat-label>Correo electrónico</mat-label>
+<input matInput placeholder="Enter your name" name="usename"
+[(ngModel)] ="username">
+</mat-form-field>
+<mat-form-field class="example-full-width" appearance="fill">
+<mat-label>Contraseña</mat-label>
+<input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="submit()">Submit</button>
+<span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+</form>

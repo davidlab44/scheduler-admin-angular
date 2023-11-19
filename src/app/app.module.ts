@@ -15,8 +15,9 @@ import { routes } from './app.routes';
 import { ContainerDirective } from './container.directive';
 import { ShareComponent } from './share/share.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { LoginComponent } from './login/login.component';
 
 WebFont.load({
   google: {
@@ -25,7 +26,7 @@ WebFont.load({
 });
 
 @NgModule({
-  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent,LoginComponent],
+  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -35,6 +36,8 @@ WebFont.load({
     MatTabsModule,
     MatToolbarModule,
     HttpClientModule,
+    LoginComponent,
+    MatSlideToggleModule,
     RouterModule.forRoot(routes, {}),
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production,

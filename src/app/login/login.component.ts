@@ -1,51 +1,55 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { MatTabGroup } from '@angular/material/tabs';
+import { Component } from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.sass']
+  styleUrls: ['./login.component.scss'],
+  standalone: true,
+  imports: [FormsModule, MatFormFieldModule, MatInputModule]
 })
-export class LoginComponent implements OnInit {
-
-  //@ViewChild('group') group: MatTabGroup;
-  //@ViewChild('loginError') loginError: ElementRef;
-  //@ViewChild('forgotError') forgotError: ElementRef;
-
-  //@ViewChild('emailLogin') emailLogin: ElementRef;
-  //@ViewChild('emailForgot') emailForgot: ElementRef;
-
-  constructor() { }
-
-  ngOnInit() { }
-
-  navigateTo(index: number) {
-    //this.group.selectedIndex = index
+export class LoginComponent {
+  username : string ="";
+  password : string ="";
+  show: boolean= false;
+  submit(){
+  console.log("user name is " + this.username)
+  this.clear();
   }
-
-  login() {
-    
-    //this.loginError.nativeElement.classList = "error"
+  clear(){
+  this.username ="";
+  this.password = "";
+  this.show = true;
   }
-
-  forgot() {
-    /*
-    this.emailForgot.nativeElement.value = 
-      this.emailLogin.nativeElement.value
-    this.navigateTo(1)
-    */
-  }
-
-  submit() {
-    this.navigateTo(2)
-  }
-
-  cancel() {
-    this.navigateTo(0)
-  }
-
-  back() {
-    this.navigateTo(0)
-  }
-
 }
+
+
+
+
+
+
+/*
+import {Component} from '@angular/core';
+
+@Component({
+selector: 'login-demo',
+styleUrls: ['demo.login.component.css'],
+templateUrl: 'demo.login.component.html',
+})
+export class LoginFormDemo {
+username : string ="";
+password : string ="";
+show: boolean= false;
+submit(){
+console.log("user name is " + this.username)
+this.clear();
+}
+clear(){
+this.username ="";
+this.password = "";
+this.show = true;
+}
+}
+*/
