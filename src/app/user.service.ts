@@ -14,11 +14,9 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrlGet);
   }
-  
 
   login(username: string, password: string): Observable<any> {
 
