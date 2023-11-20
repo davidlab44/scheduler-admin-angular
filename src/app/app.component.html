@@ -10,7 +10,10 @@
   <!-- <mat-slide-toggle></mat-slide-toggle> -->
   <br>
 
-  <app-login></app-login>
+  <div *ngIf="loginvisibility">
+    <app-login></app-login>
+  </div>
+  
   <!-- <app-user-list></app-user-list> -->
   <!-- <h1>Progressive Web Apps made ridiculously easy with Angular</h1> -->
   <br>

@@ -16,14 +16,17 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent implements OnInit{
 
   //users: User[] = [];
-  loginvisibility=true;
+  //loginvisibility=true;
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void { 
+    /*
     if(localStorage.hasOwnProperty('valor')){
       this.loginvisibility=false;
     }
+    */
   }
+
 
   login(username: string, password: string): void {
     this.loginService.login(username, password).subscribe(
@@ -59,10 +62,6 @@ export class LoginComponent implements OnInit{
     }
     */
 }
-
-
-
-
 
 
 /*
