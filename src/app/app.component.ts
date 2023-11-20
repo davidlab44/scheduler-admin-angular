@@ -5,6 +5,8 @@ import { OnInit } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
+import { UserService } from './user.service';
+import { User } from './user.interface';
 
 
 @Component({
@@ -16,10 +18,37 @@ import {FormsModule} from '@angular/forms';
 export class AppComponent implements OnInit{
   public appRoutes = routes;
   loginvisibility=true;
+  users: User[] = [];
+
+  constructor(private userService: UserService) {}
+
 
   ngOnInit(): void { 
     if(localStorage.hasOwnProperty('valor')){
       this.loginvisibility=false;
     }
+
+    this.userService.getUsers().subscribe(
+      (data: User[]) => {
+        this.users = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
+
+
+   //ngOnInit(): void {
+    /*
+    this.userService.getUsers().subscribe(
+      (data: User[]) => {
+        this.users = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+    */
+  //}
 }

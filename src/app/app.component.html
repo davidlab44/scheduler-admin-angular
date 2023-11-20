@@ -14,6 +14,14 @@
     <app-login></app-login>
   </div>
   <app-branches></app-branches>
+  <ul>
+    <li *ngFor="let user of users">
+      <p>ID: {{ user.id }}</p>
+      <p>Name: {{ user.name }}</p>
+      <p>Email: {{ user.email }}</p>
+      <!-- Display other properties as needed -->
+    </li>
+  </ul>
   <div *ngIf="loginvisibility">
     <app-branches></app-branches>
   </div>
