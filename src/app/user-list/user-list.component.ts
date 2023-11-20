@@ -9,7 +9,7 @@ import { User } from '../user.interface';
 })
 //export class UserListComponent implements OnInit {
 export class UserListComponent {
-  users: User[] = [];
+  //users: User[] = [];
 
   constructor(private userService: UserService) {}
 

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
+import { LoginService } from '../login.service';
+import { LoginResponse } from '../login-response.interface';
 
 @Component({
   selector: 'app-login',
@@ -11,18 +13,39 @@ import {FormsModule} from '@angular/forms';
   imports: [FormsModule, MatFormFieldModule, MatInputModule]
 })
 export class LoginComponent {
+
+  //users: User[] = [];
+
+  constructor(private loginService: LoginService) {}
+
+  login(username: string, password: string): void {
+    this.loginService.login(username, password).subscribe(
+      (response) => {
+        // Handle the response here
+        console.log('Login response:', response);
+      },
+      (error) => {
+        // Handle errors
+        console.error('Login error:', error);
+      }
+    );
+  }
+
     username : string ="";
     password : string ="";
     show: boolean= false;
     submit(){
     console.log("user name is " + this.username)
-    this.clear();
+    this.login(this.username,this.password)
+    //this.clear();
     }
+    /*
     clear(){
     this.username ="";
     this.password = "";
     this.show = true;
     }
+    */
 }
 
 
