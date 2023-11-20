@@ -18,6 +18,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LoginComponent } from './login/login.component';
+//import { CommonModule } from '@angular/common';  
 
 WebFont.load({
   google: {
@@ -35,6 +36,7 @@ WebFont.load({
     MatSnackBarModule,
     MatTabsModule,
     MatToolbarModule,
+    //CommonModule,
     HttpClientModule,
     LoginComponent,
     MatSlideToggleModule,

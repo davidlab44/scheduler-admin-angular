@@ -12,7 +12,7 @@
         </mat-form-field>
     </form>
     -->
-
+<div *ngIf="loginvisibility">
     <h2>Administrador:</h2>
     <br>
     <br>
@@ -29,3 +29,6 @@
         <button mat-raised-button color="primary" (click)="submit()">Iniciar Sesión</button>
         <!--<span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span> -->
     </form>
+</div>
+<p>login works!</p>
+

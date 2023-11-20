@@ -1,28 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { LoginService } from '../login.service';
 import { LoginResponse } from '../login-response.interface';
+import { CommonModule } from '@angular/common';  
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule]
+  imports: [FormsModule, MatFormFieldModule, MatInputModule,CommonModule]
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
   //users: User[] = [];
-
+  loginvisibility=true;
   constructor(private loginService: LoginService) {}
+
+  ngOnInit(): void { 
+    if(localStorage.hasOwnProperty('valor')){
+      this.loginvisibility=false;
+    }
+  }
 
   login(username: string, password: string): void {
     this.loginService.login(username, password).subscribe(
       (response) => {
         // Handle the response here
         console.log('Login response:', response);
+        if(response.token.length>5){
+            localStorage.setItem("valor",response.token)
+        }else{
+          localStorage.removeItem("valor");
+        }
       },
       (error) => {
         // Handle errors
