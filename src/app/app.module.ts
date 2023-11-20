@@ -15,6 +15,7 @@ import { routes } from './app.routes';
 import { ContainerDirective } from './container.directive';
 import { ShareComponent } from './share/share.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { BranchesComponent } from './branches/branches.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LoginComponent } from './login/login.component';
@@ -27,7 +28,7 @@ WebFont.load({
 });
 
 @NgModule({
-  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent],
+  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent,BranchesComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
