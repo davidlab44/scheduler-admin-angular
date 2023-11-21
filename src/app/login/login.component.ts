@@ -5,13 +5,14 @@ import {FormsModule} from '@angular/forms';
 import { LoginService } from '../login.service';
 import { LoginResponse } from '../login-response.interface';
 import { CommonModule } from '@angular/common';  
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule,CommonModule]
+  imports: [FormsModule, MatFormFieldModule, MatInputModule,CommonModule,MatButtonModule]
 })
 export class LoginComponent implements OnInit{
 
