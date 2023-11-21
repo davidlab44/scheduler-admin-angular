@@ -27,14 +27,15 @@ export class LoginComponent implements OnInit{
     */
   }
 
-
   login(username: string, password: string): void {
     this.loginService.login(username, password).subscribe(
-      (response) => {
+      (response:LoginResponse) => {
         // Handle the response here
         console.log('Login response:', response);
+        console.log('Id User:', response.user.id);
         if(response.token.length>5){
             localStorage.setItem("valor",response.token)
+            //localStorage.setItem("id",response.)
         }else{
           localStorage.removeItem("valor");
         }

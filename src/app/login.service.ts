@@ -23,6 +23,6 @@ export class LoginService {
 
     const body = { email: username, password: password };
     
-    return this.http.post<any>(this.apiUrl, body);
+    return this.http.post<LoginResponse>(this.apiUrl, body);
   }
 }
