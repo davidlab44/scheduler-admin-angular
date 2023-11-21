@@ -22,6 +22,14 @@
       <!-- Display other properties as needed -->
     </li>
   </ul>
+  <ul>
+    <li *ngFor="let branch of branches">
+      <p>ID: {{ branch.id }}</p>
+      <p>Name: {{ branch.name }}</p>
+      <p>Email: {{ branch.email }}</p>
+      <!-- Display other properties as needed -->
+    </li>
+  </ul>
   <div *ngIf="loginvisibility">
     <app-branches></app-branches>
   </div>

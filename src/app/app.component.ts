@@ -6,7 +6,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { UserService } from './user.service';
+import { BranchService } from './branch.service';
 import { User } from './user.interface';
+import { Branch } from './branches/branch.interface';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +20,9 @@ export class AppComponent implements OnInit{
   public appRoutes = routes;
   loginvisibility=true;
   users: User[] = [];
+  branches: Branch[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService,private branchService: BranchService) {}
 
 
   ngOnInit(): void { 
@@ -30,6 +33,15 @@ export class AppComponent implements OnInit{
     this.userService.getUsers().subscribe(
       (data: User[]) => {
         this.users = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+
+    this.branchService.getBranches().subscribe(
+      (data: Branch[]) => {
+        this.branches = data;
       },
       (error) => {
         console.error(error);
