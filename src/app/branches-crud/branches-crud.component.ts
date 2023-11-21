@@ -67,7 +67,7 @@ export class BranchesCrudComponent implements OnInit{
           localStorage.removeItem("valor");
         }
         */
-       window.location.reload()
+        window.location.reload();
       },
       (error) => {
         // Handle errors
