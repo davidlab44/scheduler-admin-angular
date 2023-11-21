@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit{
             localStorage.setItem("id",response.user.id.toString())
             localStorage.setItem("companies_id",response.user.company_id.toString())
             //localStorage.setItem("id",response.)
+            window.location.reload();
         }else{
           localStorage.removeItem("valor");
           localStorage.removeItem("id");
@@ -52,8 +53,8 @@ export class LoginComponent implements OnInit{
     );
   }
 
-    username : string ="";
-    password : string ="";
+    username : string ="facturaelectronicaintouch@gmail.com";
+    password : string ="123456";
     show: boolean= false;
     submit(){
     console.log("user name is " + this.username)

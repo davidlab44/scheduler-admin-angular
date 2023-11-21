@@ -8,11 +8,11 @@
 
 <content id="app-container">
   <!-- <mat-slide-toggle></mat-slide-toggle> *ngIf="loginvisibility" -->
-  <div class="row">
+  <div class="row" *ngIf="loginvisibility">
     <app-login></app-login>
   </div>
 
-  <div  gdAreas="header header header | sidebar content sidebar2 | footer footer footer"
+  <div *ngIf="!loginvisibility" gdAreas="header header header | sidebar content sidebar2 | footer footer footer"
       
       gdGap="1em"
       

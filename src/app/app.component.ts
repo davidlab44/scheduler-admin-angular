@@ -51,11 +51,7 @@ export class AppComponent implements OnInit{
         console.error(error);
       }
     );
-
-   
-
     
-
   }
 
 
@@ -94,6 +90,7 @@ export class AppComponent implements OnInit{
       localStorage.removeItem("valor");
       localStorage.removeItem("id");
       localStorage.removeItem("companies_id");
+      window.location.reload();
     }
 
 }
