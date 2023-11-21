@@ -8,7 +8,6 @@ import {FormsModule} from '@angular/forms';
 import { UserService } from './user.service';
 import { User } from './user.interface';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
