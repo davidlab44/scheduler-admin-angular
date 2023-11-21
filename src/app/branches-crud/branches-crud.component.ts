@@ -26,9 +26,6 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 //grid responsive
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
-
-
 @Component({
   selector: 'app-branches-crud',
   templateUrl: './branches-crud.component.html',
@@ -42,6 +39,12 @@ export class BranchesCrudComponent implements OnInit{
 
   //users: User[] = [];
   //loginvisibility=true;
+  internalName:string="";
+  name:string="";
+  location:string="";
+  phone:string="";
+  email:string="";
+
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void { 
