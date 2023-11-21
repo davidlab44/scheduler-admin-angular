@@ -77,13 +77,22 @@
    </div>
    <div class="blocks five" gdArea="footer">
     <div class="notice">
+    <!--
       <a
         href="https://github.com/angular/angular/issues?q=is%3Aopen+is%3Aissue+label%3A%22comp%3A+service-worker%22"
         target="_blank"
         rel="noopener"
         >Cerrar Sesión
       </a>.
-      <button (click)="logout()">Logout</button>
+      <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+    -->
+    <a
+    (click)="logout()"
+    target="_blank"
+    rel="noopener"
+    >Cerrar Sesión
+    </a>.
+    
     </div>
 
    </div>

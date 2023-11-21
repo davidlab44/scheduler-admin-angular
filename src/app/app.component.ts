@@ -12,6 +12,7 @@ import { Branch } from './branches/branch.interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -51,7 +52,7 @@ export class AppComponent implements OnInit{
         console.error(error);
       }
     );
-    
+
   }
 
 
