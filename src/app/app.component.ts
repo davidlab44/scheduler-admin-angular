@@ -52,6 +52,8 @@ export class AppComponent implements OnInit{
       }
     );
 
+   
+
     
 
   }
@@ -86,6 +88,12 @@ export class AppComponent implements OnInit{
     createBranch(): Observable<any> {
         const body = { companies_id:3, departments_id:5, internal_name:"NA", internal_code:0,name:"sanfdo2", email:"snf2@gm.com",phone:"301245", city_code:"CTG", location:"calle", isMain:0 };
         return this.http.post<any>(this.apiUrl, body);
+    }
+
+    logout(){
+      localStorage.removeItem("valor");
+      localStorage.removeItem("id");
+      localStorage.removeItem("companies_id");
     }
 
 }

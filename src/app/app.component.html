@@ -69,8 +69,8 @@
         <li *ngFor="let branch of branches">
           <hr>
           <p>ID: {{ branch.id }}</p>
-          <p>Branch Name: {{ branch.name }}</p>
-          <p>Branch Email: {{ branch.email }}</p>
+          <p>Nombre de la Sucursal: {{ branch.name }}</p>
+          <p>Correo electronico: {{ branch.email }}</p>
         </li>
       </ul>
     </div>
@@ -83,6 +83,7 @@
         rel="noopener"
         >Cerrar Sesión
       </a>.
+      <button (click)="logout()">Logout</button>
     </div>
 
    </div>
