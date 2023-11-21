@@ -1,0 +1,20 @@
+<p>branches-crud works!</p>
+
+<h2>Administrador:</h2>
+<br>
+<br>
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Correo electrónico</mat-label>
+    <input matInput placeholder="Enter your email" name="usename"
+    [(ngModel)] ="username">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Contraseña</mat-label>
+    <input matInput placeholder="Enter your password" value="" name="password" type="password" [(ngModel)]= "password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" style="padding:10px;background-color: #007bff;" (click)="submit()">Iniciar Sesión</button>
+    <!--<span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span> -->
+</form>
+<p>branches-crud works!</p>
+

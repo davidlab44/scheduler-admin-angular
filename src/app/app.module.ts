@@ -19,6 +19,7 @@ import { BranchesComponent } from './branches/branches.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LoginComponent } from './login/login.component';
+import { BranchesCrudComponent } from './branches-crud/branches-crud.component';
 //import { CommonModule } from '@angular/common';  
 import { FormsModule } from '@angular/forms';
 //grid responsive
@@ -34,7 +35,7 @@ WebFont.load({
 });
 
 @NgModule({
-  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent,BranchesComponent,AppComponent, CustomHideDirective, TestComponent],
+  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent,BranchesComponent, CustomHideDirective, TestComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -49,6 +50,7 @@ WebFont.load({
     FormsModule,
     HttpClientModule,
     LoginComponent,
+    BranchesCrudComponent,
     MatSlideToggleModule,
     RouterModule.forRoot(routes, {}),
     ServiceWorkerModule.register('/ngsw-worker.js', {
