@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LoginComponent } from './login/login.component';
 //import { CommonModule } from '@angular/common';  
+import { FormsModule } from '@angular/forms';
 
 WebFont.load({
   google: {
@@ -38,6 +39,7 @@ WebFont.load({
     MatTabsModule,
     MatToolbarModule,
     //CommonModule,
+    FormsModule,
     HttpClientModule,
     LoginComponent,
     MatSlideToggleModule,

@@ -10,29 +10,50 @@
   <!-- <mat-slide-toggle></mat-slide-toggle> -->
   <br>
 
-  <div *ngIf="loginvisibility">
+  <div class="row" *ngIf="loginvisibility">
     <app-login></app-login>
   </div>
-  <app-branches></app-branches>
-  <ul>
-    <li *ngFor="let user of users">
-      <p>ID: {{ user.id }}</p>
-      <p>Name: {{ user.name }}</p>
-      <p>Email: {{ user.email }}</p>
-      <!-- Display other properties as needed -->
-    </li>
-  </ul>
-  <ul>
-    <li *ngFor="let branch of branches">
-      <p>ID: {{ branch.id }}</p>
-      <p>Name: {{ branch.name }}</p>
-      <p>Email: {{ branch.email }}</p>
-      <!-- Display other properties as needed -->
-    </li>
-  </ul>
-  <div *ngIf="loginvisibility">
-    <app-branches></app-branches>
+  
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <app-branches></app-branches>
+      <ul>
+        <li *ngFor="let user of users">
+          <p>ID: {{ user.id }}</p>
+          <p>Name: {{ user.name }}</p>
+          <p>Email: {{ user.email }}</p>
+          <!-- Display other properties as needed -->
+        </li>
+      </ul>
+      <ul>
+        <li *ngFor="let branch of branches">
+          <p>ID: {{ branch.id }}</p>
+          <p>Branch Name: {{ branch.name }}</p>
+          <p>Branch Email: {{ branch.email }}</p>
+          <!-- Display other properties as needed -->
+        </li>
+      </ul>
+      <div *ngIf="loginvisibility">
+        <app-branches></app-branches>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <hr>
+      <div class="form-group">
+        <input nbInput fullWidth [(ngModel)]="name" name="nombre" placeholder="No. Unidad">
+        <br>
+      </div>
+      <div class="form-group">
+        <input nbInput fullWidth [(ngModel)]="internal_name" name="nombre" placeholder="Nombre Unidad">
+        <br>
+      </div>
+      <button type="submit" nbButton status="primary" (click)="create2()">Crear sucursal</button>
+    </div>
   </div>
+
+
+  
+
 
   
   <!-- <app-user-list></app-user-list> -->
