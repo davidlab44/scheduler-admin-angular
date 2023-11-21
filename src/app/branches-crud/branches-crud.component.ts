@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
-import { LoginService } from '../login.service';
+import { BranchService } from '../branch.service';
 
 import { CommonModule } from '@angular/common';  
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
@@ -45,7 +45,7 @@ export class BranchesCrudComponent implements OnInit{
   phone:string="";
   email:string="";
 
-  constructor(private loginService: LoginService) {}
+  constructor(private branchService: BranchService) {}
 
   ngOnInit(): void { 
     /*
@@ -55,8 +55,8 @@ export class BranchesCrudComponent implements OnInit{
     */
   }
 
-  login(username: string, password: string): void {
-    this.loginService.login(username, password).subscribe(
+  postBranch(username: string, password: string): void {
+    this.branchService.postOneBranch(this.internalName,this.name,this.email,this.phone).subscribe(
       (response) => {
         // Handle the response here
         console.log('Login response:', response);
@@ -77,8 +77,7 @@ export class BranchesCrudComponent implements OnInit{
     password : string ="";
     show: boolean= false;
     submit(){
-    console.log("user name is " + this.username)
-    this.login(this.username,this.password)
+    this.postBranch(this.username,this.password)
     //this.clear();
     }
     /*

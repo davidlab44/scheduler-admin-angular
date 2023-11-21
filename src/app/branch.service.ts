@@ -10,7 +10,7 @@ export class BranchService {
   //private apiUrl = 'https://starappstechnologies.com/fel/auth/public/api/clients-by-company/3'; // Replace with your actual API endpoint
   //private apiUrl = 'http://localhost/fel/auth/public/api/login?email=facturaelectronicaintouch@gmail.com&password=123456';
   private apiUrlGet = 'http://localhost/scheduler-php/public/api/branches-by-company/3';
-  //private apiUrl = 'http://localhost/fel/auth/public/api/login';
+  private apiUrlPost = 'http://localhost/scheduler-php/public/api/branches';
 
   constructor(private http: HttpClient) {}
 
@@ -18,12 +18,9 @@ export class BranchService {
     return this.http.get<Branch[]>(this.apiUrlGet);
   }
 
-  /*
-  login(username: string, password: string): Observable<any> {
-
-    const body = { email: username, password: password };
-    
-    return this.http.post<any>(this.apiUrl, body);
+  postOneBranch(internalName: string, name: string, email:string, phone:string): Observable<any> {
+    const body = { companies_id:3,departments_id:5,internal_name:internalName,name:name,email:email,phone:phone };
+    return this.http.post<any>(this.apiUrlPost, body);
   }
-  */
+  
 }
