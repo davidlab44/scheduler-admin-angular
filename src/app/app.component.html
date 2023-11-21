@@ -8,6 +8,32 @@
 
 <content id="app-container">
   <!-- <mat-slide-toggle></mat-slide-toggle> -->
+
+  <div  gdAreas="header header header | sidebar content sidebar2 | footer footer footer"
+      gdColumns="20%!"
+      gdGap="1em"
+      
+      gdAreas.xs="header | sidebar | content | sidebar2 | footer" 
+      gdColumns.xs="none"      
+      gdGap.xs="10px" 
+
+      gdAreas.sm="header header | sidebar content | sidebar2 sidebar2 | footer footer"
+      gdColumns.sm="120px auto 120px" 
+
+      [ngStyle]="{'max-width': 'auto'}"      
+      [ngStyle.xs]="{'max-width': '800px'}">
+
+   <div class="blocks one"    gdArea="header">Header</div>
+   <div class="blocks two"    gdArea="sidebar">Sidebar</div>
+   <div class="blocks three"  gdArea="sidebar2">Sidebar 2</div>
+   <div class="blocks four"   gdArea="content">
+     Content
+     <br /> More content than we had before so this column is now quite tall.
+  </div>
+   <div class="blocks five" gdArea="footer">Footer</div>
+
+  </div>
+
   <br>
 
   <div class="row" *ngIf="loginvisibility">

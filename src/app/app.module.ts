@@ -21,6 +21,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LoginComponent } from './login/login.component';
 //import { CommonModule } from '@angular/common';  
 import { FormsModule } from '@angular/forms';
+//grid responsive
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TestComponent } from './test-shell/test.component';
+import { CustomBreakPointsProvider, CUSTOM_HEIGHT_BREAKPOINTS } from './layout/breakpoints';
+import { CustomHideDirective } from './layout/custom-hide.directive';
 
 WebFont.load({
   google: {
@@ -29,7 +34,7 @@ WebFont.load({
 });
 
 @NgModule({
-  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent,BranchesComponent],
+  declarations: [AppComponent, ContainerDirective, ShareComponent, UserListComponent,BranchesComponent,AppComponent, CustomHideDirective, TestComponent],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -38,6 +43,8 @@ WebFont.load({
     MatSnackBarModule,
     MatTabsModule,
     MatToolbarModule,
+    BrowserModule, 
+    FlexLayoutModule.withConfig({}, CUSTOM_HEIGHT_BREAKPOINTS ),
     //CommonModule,
     FormsModule,
     HttpClientModule,
@@ -48,7 +55,7 @@ WebFont.load({
       enabled: environment.production,
     }),
   ],
-  providers: [],
+  providers: [CustomBreakPointsProvider],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
