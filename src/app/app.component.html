@@ -8,6 +8,9 @@
 
 <content id="app-container">
   <!-- <mat-slide-toggle></mat-slide-toggle> -->
+  <div class="row" *ngIf="loginvisibility">
+    <app-login></app-login>
+  </div>
 
   <div  gdAreas="header header header | sidebar content sidebar2 | footer footer footer"
       
@@ -23,25 +26,41 @@
       [ngStyle]="{'max-width': 'auto'}"      
       [ngStyle.xs]="{'max-width': '800px'}">
 
-   <div class="blocks one"    gdArea="header">Header</div>
-   <div class="blocks two"    gdArea="sidebar">Sidebar</div>
-   <div class="blocks three"  gdArea="sidebar2">Sidebar 2</div>
+   <!-- <div class="blocks one"    gdArea="header">Header</div> -->
+   <div class="blocks two"    gdArea="sidebar">
+      
+      <br /> Empresa: Inversiones Facel
+      <br /> NIT: 900211145-2
+      <br /> 
+      <br /> 20 noviembre, 2023
+      <br /> usuarios atendidos el dia de hoy: 45
+      <br /> usuarios pendientes poe atender el dia de hoy: 221
+
+
+
+   </div>
+   <div class="blocks three"  gdArea="sidebar2">
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <hr>
+      <div class="form-group">
+        <input nbInput fullWidth [(ngModel)]="name" name="nombre" placeholder="No. Unidad">
+        <br>
+      </div>
+      <div class="form-group">
+        <input nbInput fullWidth [(ngModel)]="internal_name" name="nombre" placeholder="Nombre Unidad">
+        <br>
+      </div>
+      <button type="submit" nbButton status="primary" (click)="create2()">Crear sucursal</button>
+    </div>
+
+
+    
+   </div>
    <div class="blocks four"   gdArea="content">
      Content
-     <br /> More content than we had before so this column is now quite tall.
-  </div>
-   <div class="blocks five" gdArea="footer">Footer</div>
-
-  </div>
-
-  <br>
-
-  <div class="row" *ngIf="loginvisibility">
-    <app-login></app-login>
-  </div>
-  
-  <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    
+     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
       <app-branches></app-branches>
       <ul>
         <li *ngFor="let user of users">
@@ -63,19 +82,19 @@
         <app-branches></app-branches>
       </div>
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <hr>
-      <div class="form-group">
-        <input nbInput fullWidth [(ngModel)]="name" name="nombre" placeholder="No. Unidad">
-        <br>
-      </div>
-      <div class="form-group">
-        <input nbInput fullWidth [(ngModel)]="internal_name" name="nombre" placeholder="Nombre Unidad">
-        <br>
-      </div>
-      <button type="submit" nbButton status="primary" (click)="create2()">Crear sucursal</button>
-    </div>
+
+   </div>
+   <!-- <div class="blocks five" gdArea="footer">Footer</div> -->
+   
   </div>
+
+  <br>
+
+  
+  
+ 
+    
+
 
 
   

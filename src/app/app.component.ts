@@ -20,7 +20,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit{
   public appRoutes = routes;
-  loginvisibility=true;
+  loginvisibility=false;
   users: User[] = [];
   branches: Branch[] = [];
   private apiUrl = 'http://localhost/scheduler-php/public/api/branches';
