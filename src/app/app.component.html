@@ -7,8 +7,8 @@
 </header>
 
 <content id="app-container">
-  <!-- <mat-slide-toggle></mat-slide-toggle> -->
-  <div class="row" *ngIf="loginvisibility">
+  <!-- <mat-slide-toggle></mat-slide-toggle> *ngIf="loginvisibility" -->
+  <div class="row">
     <app-login></app-login>
   </div>
 
@@ -152,7 +152,7 @@
     </a>
   </nav>
   <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
-
+localStorage.getItem("companies_id")
   <mat-tab-nav-panel #tabPanel>
     <router-outlet></router-outlet>
   </mat-tab-nav-panel>

@@ -55,32 +55,36 @@ export class BranchesCrudComponent implements OnInit{
     */
   }
 
-  postBranch(username: string, password: string): void {
-    this.branchService.postOneBranch(this.internalName,this.name,this.email,this.phone).subscribe(
-      (response) => {
-        // Handle the response here
-        console.log('Login response:', response);
-        /*
-        if(response.token.length>5){
-            localStorage.setItem("valor",response.token)
-        }else{
-          localStorage.removeItem("valor");
+  postBranch(): void {
+    let companies_id=localStorage.getItem("companies_id")
+    if(companies_id){
+      this.branchService.postOneBranch(companies_id,this.internalName,this.name,this.email,this.phone).subscribe(
+        (response) => {
+          // Handle the response here
+          console.log('Login response:', response);
+          /*
+          if(response.token.length>5){
+              localStorage.setItem("valor",response.token)
+          }else{
+            localStorage.removeItem("valor");
+          }
+          */
+          window.location.reload();
+        },
+        (error) => {
+          // Handle errors
+          console.error('Login error:', error);
         }
-        */
-        window.location.reload();
-      },
-      (error) => {
-        // Handle errors
-        console.error('Login error:', error);
-      }
-    );
+      );
+    }
+    
   }
 
-    username : string ="";
-    password : string ="";
-    show: boolean= false;
+    //username : string ="";
+    //password : string ="";
+    //show: boolean= false;
     submit(){
-    this.postBranch(this.username,this.password)
+    this.postBranch()
     //this.clear();
     }
     /*

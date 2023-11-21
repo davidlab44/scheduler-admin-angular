@@ -29,8 +29,6 @@ export class AppComponent implements OnInit{
 
   constructor(private userService: UserService,private branchService: BranchService, private http:HttpClient) {}
 
- 
-
   ngOnInit(): void { 
     if(localStorage.hasOwnProperty('valor')){
       this.loginvisibility=false;
@@ -72,19 +70,18 @@ export class AppComponent implements OnInit{
 */
 //}
 
-create2(): void {
-  this.createBranch().subscribe(
-    (response) => {
-      // Handle the response here
-      console.log('Branch response:', response);
-    },
-    (error) => {
-      // Handle errors
-      console.error('Branch error:', error);
+    create2(): void {
+      this.createBranch().subscribe(
+        (response) => {
+          // Handle the response here
+          console.log('Branch response:', response);
+        },
+        (error) => {
+          // Handle errors
+          console.error('Branch error:', error);
+        }
+      );
     }
-  );
-}
-
 
     createBranch(): Observable<any> {
         const body = { companies_id:3, departments_id:5, internal_name:"NA", internal_code:0,name:"sanfdo2", email:"snf2@gm.com",phone:"301245", city_code:"CTG", location:"calle", isMain:0 };

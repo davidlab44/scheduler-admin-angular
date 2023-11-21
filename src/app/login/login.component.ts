@@ -35,9 +35,14 @@ export class LoginComponent implements OnInit{
         console.log('Id User:', response.user.id);
         if(response.token.length>5){
             localStorage.setItem("valor",response.token)
+            //localStorage.setItem("id",response.user.id)
+            localStorage.setItem("id",response.user.id.toString())
+            localStorage.setItem("companies_id",response.user.company_id.toString())
             //localStorage.setItem("id",response.)
         }else{
           localStorage.removeItem("valor");
+          localStorage.removeItem("id");
+          localStorage.removeItem("companies_id");
         }
       },
       (error) => {
