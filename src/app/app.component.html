@@ -28,19 +28,16 @@
 
    <!-- <div class="blocks one"    gdArea="header">Header</div> -->
    <div class="blocks two"    gdArea="sidebar">
-      
       <br /> Empresa: Inversiones Facel
       <br /> NIT: 900211145-2
       <br /> 
       <br /> 20 noviembre, 2023
       <br /> usuarios atendidos el dia de hoy: 45
       <br /> usuarios pendientes poe atender el dia de hoy: 221
-
-
-
    </div>
    <div class="blocks three"  gdArea="sidebar2">
-
+    <app-branches-crud></app-branches-crud>
+    <!--
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
       <hr>
       <div class="form-group">
@@ -53,38 +50,42 @@
       </div>
       <button type="submit" nbButton status="primary" (click)="create2()">Crear sucursal</button>
     </div>
-    <app-branches-crud></app-branches-crud>
+    -->
    </div>
-   
+
    <div class="blocks four"   gdArea="content">
-     Content
-    
      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <!--
       <app-branches></app-branches>
       <ul>
         <li *ngFor="let user of users">
           <p>ID: {{ user.id }}</p>
           <p>Name: {{ user.name }}</p>
           <p>Email: {{ user.email }}</p>
-          <!-- Display other properties as needed -->
         </li>
       </ul>
+      -->
       <ul>
         <li *ngFor="let branch of branches">
+          <hr>
           <p>ID: {{ branch.id }}</p>
           <p>Branch Name: {{ branch.name }}</p>
           <p>Branch Email: {{ branch.email }}</p>
-          <!-- Display other properties as needed -->
         </li>
       </ul>
-      <div *ngIf="loginvisibility">
-        <app-branches></app-branches>
-      </div>
+    </div>
+   </div>
+   <div class="blocks five" gdArea="footer">
+    <div class="notice">
+      <a
+        href="https://github.com/angular/angular/issues?q=is%3Aopen+is%3Aissue+label%3A%22comp%3A+service-worker%22"
+        target="_blank"
+        rel="noopener"
+        >Cerrar Sesión
+      </a>.
     </div>
 
    </div>
-   <!-- <div class="blocks five" gdArea="footer">Footer</div> -->
-   
   </div>
 
   <br>

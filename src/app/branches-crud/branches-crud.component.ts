@@ -29,9 +29,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
-
-
-
 @Component({
   selector: 'app-branches-crud',
   templateUrl: './branches-crud.component.html',
