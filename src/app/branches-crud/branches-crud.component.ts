@@ -60,11 +60,14 @@ export class BranchesCrudComponent implements OnInit{
       (response) => {
         // Handle the response here
         console.log('Login response:', response);
+        /*
         if(response.token.length>5){
             localStorage.setItem("valor",response.token)
         }else{
           localStorage.removeItem("valor");
         }
+        */
+       window.location.reload()
       },
       (error) => {
         // Handle errors
