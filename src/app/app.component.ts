@@ -11,6 +11,7 @@ import { User } from './user.interface';
 import { Branch } from './branches/branch.interface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit{
   loginvisibility=true;
   users: User[] = [];
   branches: Branch[] = [];
-  private apiUrl = 'http://localhost/scheduler-php/public/api/branches';
+  private apiUrl = environment.apiHost+'branches';
   name:string="";
   internal_name:string="";
 

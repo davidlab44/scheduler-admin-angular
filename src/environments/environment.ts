@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  //production: false,
+  //apiHost: '../../../turnoscolombia/scheduler-php-v2/public/api/',
   production: false,
+  apiHost: 'http://localhost/scheduler-php/public/api/',
 };
 
 /*
